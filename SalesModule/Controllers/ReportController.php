@@ -43,10 +43,12 @@ class ReportController extends Controller {
         }
 
         //format data for the map
-        $formattedData[] = ['Day', 'Customer', 'Orders'];
         foreach($data as $date => $value) {
             $formattedData[] = [$date, $value['Customers'], $value['Orders']];
         }
+
+        sort($formattedData);
+        $formattedData[0] = ['Day', 'Customer', 'Orders'];
 
         return $this->handleJsonResponse($formattedData);
 
