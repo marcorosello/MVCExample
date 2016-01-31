@@ -11,7 +11,9 @@ Install environment and clone this project in the shared folder
     $ git clone https://github.com/marcorosello/MVCExample.git
 ```
 Add the database credentials to the config.php file in the base folder
+
+Autoload classes with composer
 ```sh
-    $ composer install
+    $ composer update
     $ composer dump-autoload -o
 ```
