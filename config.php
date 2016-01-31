@@ -4,7 +4,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 //database credentials
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'sales2');
+define('DB_NAME', 'sales');
 define('DB_USER', 'vagrant');
 define('DB_PASS', 'vagrant');
 

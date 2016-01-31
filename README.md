@@ -6,14 +6,26 @@ Vagrant environment for php7.
 ```sh
     $ git clone https://github.com/rlerdorf/php7dev.git
 ```
-Install environment and clone this project in the shared folder
+
+Create a shared folder
+```sh
+    $ mkdir www
+    $ vagrant ssh
+    $ sudo ln -s /vagrant/www /var/www/default
+```
+
+Inside www
 ```sh
     $ git clone https://github.com/marcorosello/MVCExample.git
 ```
-Add the database credentials to the config.php file in the base folder
 
 Autoload classes with composer
 ```sh
-    $ composer update
     $ composer dump-autoload -o
 ```
+Add the database credentials to the config.php file in the base folder, by default sales adn vagrant user
+
+add 192.168.7.7 php7dev to your hosts file and you should be able to see the app in
+
+http://php7dev/www/
+
